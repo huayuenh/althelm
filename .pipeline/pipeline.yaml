@@ -39,7 +39,7 @@ spec:
         - name: pipeline-debug
           value: $(params.pipeline-debug)
       workspaces:
-        - name: workspace
+        - name: output
           workspace: pipeline-ws
     - name: docker-lint
       runAfter: [git-clone]
@@ -80,7 +80,7 @@ spec:
         - name: pipeline-debug
           value: $(params.pipeline-debug)
       workspaces:
-        - name: workspace
+        - name: source
           workspace: pipeline-ws
       resources:
         outputs:
@@ -101,7 +101,7 @@ spec:
         - name: pipeline-debug
           value: $(params.pipeline-debug)
       workspaces:
-        - name: workspace
+        - name: artifacts
           workspace: pipeline-ws
       resources:
         inputs:
