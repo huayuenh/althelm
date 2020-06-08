@@ -13,17 +13,17 @@ inputs:
     service: ${TEKTON_CATALOG_REPO}
     path: container-registry
   - type: git
-    branch: master
-    service: ${TEKTON_TEMP_COMMON}
+    branch: trialv1
+    service: ${TEKTON_CATALOG_REPO}
     path: temp/docker
   - type: git
-    branch: master
-    service: ${TEKTON_TEMP_COMMON}
+    branch: trialv1
+    service: ${TEKTON_CATALOG_REPO}
     path: temp/helm
   - type: git
-    branch: master
-    service: ${TEKTON_TEMP_COMMON}
-    path: temp/tests
+    branch: trialv1
+    service: ${TEKTON_CATALOG_REPO}
+    path: temp/unit-tests
 triggers:
   - type: manual
     name: Manual Trigger
